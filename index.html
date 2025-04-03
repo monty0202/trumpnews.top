@@ -133,7 +133,11 @@
             <!-- Trump profile - Left module -->
             <div class="trump-profile md:col-span-1">
                 <div class="p-0">
-                    <img id="trump-image" src="Trump.png" alt="Donald J. Trump" class="w-full h-auto" loading="eager" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg';">
+                    <img id="trump-image" 
+                         src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" 
+                         alt="Donald J. Trump" 
+                         class="w-full h-auto" 
+                         loading="eager">
                     <div class="p-4 text-center">
                         <h2 class="text-3xl font-bold mb-2">Donald J. Trump</h2>
                         <p class="text-trump-gold font-semibold mb-4">45th President of the United States</p>
@@ -554,7 +558,6 @@
             loadMockData();
         });
 
-        // Add this at the beginning of the script section
         // Check if Trump image is in localStorage
         document.addEventListener('DOMContentLoaded', function() {
             const trumpImageElement = document.getElementById('trump-image');
@@ -567,11 +570,11 @@
                 trumpImageElement.src = cachedTrumpImage;
                 console.log('Loaded Trump image from cache');
             } else {
-                // Fallback images in case the primary one fails
+                // Reliable image sources in order of preference
                 const trumpImageUrls = [
-                    'Trump.png',
-                    'https://i.imgur.com/8jNQXAF.png',
-                    'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg'
+                    'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg',
+                    'https://www.whitehouse.gov/wp-content/uploads/2021/01/45_donald_j_trump.jpg',
+                    'https://i.imgur.com/8jNQXAF.png'
                 ];
                 
                 // Function to try loading an image
