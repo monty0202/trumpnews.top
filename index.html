@@ -133,7 +133,7 @@
             <!-- Trump profile - Left module -->
             <div class="trump-profile md:col-span-1">
                 <div class="p-0">
-                    <img src="Trump.png" alt="Donald J. Trump" class="w-full h-auto" loading="eager">
+                    <img id="trump-image" src="Trump.png" alt="Donald J. Trump" class="w-full h-auto" loading="eager" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg';">
                     <div class="p-4 text-center">
                         <h2 class="text-3xl font-bold mb-2">Donald J. Trump</h2>
                         <p class="text-trump-gold font-semibold mb-4">45th President of the United States</p>
@@ -552,6 +552,59 @@
         fetchNews(currentPage).catch(() => {
             // If initial fetch fails completely, load mock data
             loadMockData();
+        });
+
+        // Add this at the beginning of the script section
+        // Check if Trump image is in localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const trumpImageElement = document.getElementById('trump-image');
+            
+            // Try to get the image from localStorage
+            const cachedTrumpImage = localStorage.getItem('trumpImage');
+            
+            if (cachedTrumpImage) {
+                // Use the cached image
+                trumpImageElement.src = cachedTrumpImage;
+                console.log('Loaded Trump image from cache');
+            } else {
+                // Fallback images in case the primary one fails
+                const trumpImageUrls = [
+                    'Trump.png',
+                    'https://i.imgur.com/8jNQXAF.png',
+                    'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg'
+                ];
+                
+                // Function to try loading an image
+                function tryLoadImage(index) {
+                    if (index >= trumpImageUrls.length) {
+                        console.error('All image sources failed');
+                        // Use a data URI as last resort
+                        trumpImageElement.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzExMmU1MSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBkeT0iLjNlbSI+RG9uYWxkIEouIFRydW1wPC90ZXh0Pjwvc3ZnPg==';
+                        return;
+                    }
+                    
+                    const tempImg = new Image();
+                    tempImg.onload = function() {
+                        // Image loaded successfully
+                        trumpImageElement.src = trumpImageUrls[index];
+                        // Cache the successful image URL
+                        try {
+                            localStorage.setItem('trumpImage', trumpImageUrls[index]);
+                        } catch (e) {
+                            console.warn('Could not cache image in localStorage', e);
+                        }
+                    };
+                    tempImg.onerror = function() {
+                        // Try the next image
+                        console.warn(`Image source failed: ${trumpImageUrls[index]}`);
+                        tryLoadImage(index + 1);
+                    };
+                    tempImg.src = trumpImageUrls[index];
+                }
+                
+                // Start trying to load images
+                tryLoadImage(0);
+            }
         });
     </script>
 </body>
