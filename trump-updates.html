@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Has Trump Been Up to in the Last 24 Hours? | Latest Trump News</title>
+    <meta name="description" content="Daily updates on Donald J. Trump's activities, statements, and policy announcements. Track what the former president has been doing each day.">
+    <meta name="keywords" content="Donald Trump, Trump news, Trump daily updates, Trump activities, Trump statements, Trump policy">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9831504347100925"
+     crossorigin="anonymous"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B4X4NP9SE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7B4X4NP9SE');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'trump-blue': '#112e51',
+                        'trump-red': '#e31c3d',
+                        'trump-gold': '#f5c65d',
+                        'trump-navy': '#162e51',
+                        'trump-gray': '#f1f1f1',
+                        'trump-dark': '#323a45'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Add this meta tag to prevent Google from detecting redirects -->
+    <meta name="googlebot" content="noarchive, noimageindex, follow, index">
+    
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+        }
+        .update-item {
+            border-left: 3px solid #e31c3d;
+            padding-left: 1rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .update-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .update-title {
+            font-weight: 600;
+            color: #112e51;
+            margin-bottom: 0.25rem;
+        }
+        .update-content {
+            color: #323a45;
+        }
+        .day-container {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        .day-header {
+            background-color: #162e51;
+            color: white;
+            padding: 1rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .day-content {
+            padding: 1.5rem;
+        }
+        /* Loading animation */
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #112e51;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        /* Improved mobile responsiveness */
+        @media (max-width: 640px) {
+            .day-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .day-header span {
+                margin-top: 0.5rem;
+            }
+            .update-item {
+                padding-left: 0.75rem;
+            }
+            h1.text-3xl {
+                font-size: 1.75rem;
+            }
+        }
+        
+        /* Optimize images and layout for better performance */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Improve text readability on small screens */
+        @media (max-width: 480px) {
+            .update-content {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+        
+        /* Add smooth loading for content */
+        .day-container {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Optimize layout rendering */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Improve tap targets for mobile */
+        a, button {
+            padding: 0.5rem;
+            display: inline-block;
+        }
+        
+        /* Fix mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #162e51;
+            z-index: 50;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .mobile-menu a {
+            color: white;
+            font-size: 1.25rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-trump-navy text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold">
+                <a href="/" class="flex items-center">
+                    <span class="mr-2"><i class="fas fa-newspaper"></i></span>
+                    Latest Trump News
+                </a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-trump-gold transition">Home</a></li>
+                    <li><a href="index.html#news-section" class="hover:text-trump-gold transition">News</a></li>
+                    <li><a href="index.html#about-section" class="hover:text-trump-gold transition">About</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-6">
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <a href="index.html" class="text-trump-navy hover:text-trump-red transition mr-2">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h1 class="text-3xl font-bold text-trump-navy mb-2">What Has Trump Been Up to in the Last 24 Hours?</h1>
+            <p class="text-gray-600 mb-6">Daily updates on Donald J. Trump's activities, statements, and policy announcements.</p>
+        </div>
+
+        <!-- Add a month header above April entries -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-trump-navy border-b-2 border-trump-navy pb-2">April 2025</h2>
+        </div>
+
+        <!-- April 10, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 10, 2025</h2>
+                <span class="text-sm bg-trump-red px-2 py-1 rounded">Latest</span>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Suspending Reciprocal Tariffs for 90 Days</div>
+                        <div class="update-content">Trump announced the suspension of the reciprocal tariff policy for most economies (which had only been in effect for 13 hours) for a period of 90 days to allow for negotiations. Trump also said that he had been considering the suspension for the past few days. Trump explained the reason for suspending the reciprocal measures, saying that he felt everyone's reaction was a bit over-the-top, showing a bit of panic and fear.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Sending a "Buy" Signal</div>
+                        <div class="update-content">Before announcing the tariff suspension, Trump said on a social platform, "Stay calm! Everything will be resolved smoothly. Now is an excellent time to buy." Trump's "precise call" triggered an insider trading storm.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Commenting on the Performance of the Stock and Bond Markets</div>
+                        <div class="update-content">After announcing the tariff suspension, Trump said that the stock market was performing well and that the record-breaking performance of the stock market should continue. He is closely watching the bond market, and the bond market looks very good now. He saw that people were a bit uneasy last night.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Not Wanting US Steel to Fall into Japanese Hands</div>
+                        <div class="update-content">Trump said that he did not want to see US Steel fall into the hands of the Japanese. After the news was made public, the share price of US Steel fell by more than 11% in the extended trading session after the market closed on Wednesday. Trump said that although he liked Japan very much, US Steel was a very special company, so he did not want to see this company fall into the hands of Japanese companies. The White House government is working hard to deal with the relevant issues.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Repealing the Shower Head Water Pressure Regulation</div>
+                        <div class="update-content">Trump signed an executive order on Wednesday, instructing Energy Secretary Wright to repeal the regulation restricting the pressure of shower heads from the Obama-Biden era. He specifically complained that the energy-efficiency standards hindered him from styling his iconic hair.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Unleashing the Potential of Energy Production</div>
+                        <div class="update-content">The White House said that US President Trump signed an executive order requiring the automatic repeal of obsolete regulations to unleash the potential for innovation and energy production in the United States.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Establishing a Shipbuilding Financial Incentive Program</div>
+                        <div class="update-content">Trump ordered the establishment of a maritime security trust fund and a shipbuilding financial incentive program, and directly increased the number of merchant ships flying the US flag.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">The Tax-Cut Bill Must be Passed</div>
+                        <div class="update-content">Trump said that the Republicans in the US House of Representatives must pass the tax-cut bill. The US House of Representatives has made procedural progress on the budget plan that includes Trump's tax-cut measures.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Not Ruling Out a Meeting with Putin in the Future</div>
+                        <div class="update-content">Trump said that he did not rule out the possibility of meeting with Russian leader Putin in the future and said that Russia and Ukraine need to reach an agreement.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Not Allowing Iran to Have Nuclear Weapons</div>
+                        <div class="update-content">Trump said that he hoped Iran could become strong, but he would not allow Iran to have nuclear weapons. Trump said that if necessary, the United States would take military action, and Israel would be deeply involved and play a leading role, but "no one can lead the United States."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- April 9, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 9, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Busy with trade negotiations</div>
+                        <div class="update-content">Trump said he had a good phone call with the acting president of South Korea, discussing tariffs, the purchase of US liquefied natural gas, and a joint pipeline project in Alaska. Japan is on its way to the US for negotiations, and so is South Korea. He has held negotiations with more than 70 countries.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Deregulating the coal industry</div>
+                        <div class="update-content">Trump signed four executive orders related to coal, including directing all agencies to end all discriminatory policies against the coal industry and confronting Democratic-controlled states that oppose coal-related policies. Trump said he would activate the Defense Production Act to boost coal mining. He ordered the exploration of using coal-fired power to dominate the development of artificial intelligence and instructed the energy secretary to invest in next-generation coal technologies.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Setting goals for spending cuts</div>
+                        <div class="update-content">Trump posted that he had a good conversation with the speaker of the House of Representatives and some more conservative members that day and expressed his support for large-scale spending cuts. The US government will make spending cuts with a goal of over $1 trillion. However, sources said that the Trump administration took actions to resume some terminated foreign aid programs.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Believing that the US is capable of manufacturing iPhones</div>
+                        <div class="update-content">The White House press secretary said that Trump "absolutely" believed that Apple could produce iPhones and other devices in the US, saying, "We have the workforce and the resources to do this." After the news was released, the stock price of Apple (AAPL.O) did not rise but fell, and its market capitalization evaporated about $1.5 trillion from its peak.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Defending the tariff policy: Earning $2 billion a day</div>
+                        <div class="update-content">The US Chamber of Commerce is considering suing the Trump administration to block global tariffs. Democratic Senator Wyden said he would introduce a bipartisan bill to end tariffs. Trump defended the tariff policy, claiming that tariffs generated $2 billion in revenue per day. However, it is reported that since the 3rd of this month, the total market capitalization of the seven major US tech giants has evaporated about $1.65 trillion.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Continuing to issue tariff threats</div>
+                        <div class="update-content">Trump said that the US would impose tariffs on drugs. Once tariffs were imposed on drugs, pharmaceutical companies would open factories in the US because the US is "the largest market". Trump said he would impose tariffs on cars, timber, and steel. He also said that he told Taiwan Semiconductor Manufacturing Company (TSM.N) that if they did not build factories in the US, they would face a tax rate of up to 100%.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- April 8, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 8, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">EU Energy Ultimatum</div>
+                        <div class="update-content">In a Monday night bombshell, Trump demanded the EU commit to $350 billion in U.S. energy purchases to escape sweeping tariffs. He dismissed Brussels' "zero-for-zero" tariff proposal on cars and industrial goods, doubling down on his reciprocal tariffs agenda.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Debunking Rumors</div>
+                        <div class="update-content">The White House quashed speculation about pausing tariffs, with Trump stating he's "not considering any rollbacks" despite market jitters. They also denied plans for a June birthday military parade in D.C., calling it "fake news."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Musk Rebuffed</div>
+                        <div class="update-content">After Elon Musk privately lobbied Trump over the weekend to scrap new tariffs, the president refused, reaffirming his stance on "reciprocal trade". Musk's public criticism of trade advisor Peter Navarro—calling him "arrogant or delusional"—added fuel to the fire.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Steel Deal Revival</div>
+                        <div class="update-content">Trump ordered a re-review of U.S. Steel's $14.1 billion sale to Nippon Steel, reversing Biden's earlier block. Shares of U.S. Steel (X.N) surged 15% on the news, signaling investor optimism.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Dodgers Visit</div>
+                        <div class="update-content">Trump hosted the Los Angeles Dodgers at the White House, praising MVP Shohei Ohtani as "looking like a movie star" during a handshake. The team's visit came amid tensions over MLB's recent rule changes.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Annual Checkup</div>
+                        <div class="update-content">Trump announced he'll undergo his scheduled annual physical on April 11 at a D.C.-area military hospital. "Feeling amazing, but gotta get it done!" he tweeted, brushing off health speculation.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Record $1 Trillion Defense Budget</div>
+                        <div class="update-content">Trump and Defense Secretary Hegseth unveiled plans for a $1 trillion military budget, the largest in U.S. history, citing "global threats" and modernization needs.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Middle East & Ukraine Stance</div>
+                        <div class="update-content">Warned Iran of "dire consequences" if nuclear talks fail.
+Floated the idea of U.S. control over Gaza, sparking 争议.
+Expressed "disappointment" over Russia's ongoing Ukraine attacks.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Boosting Morale via Fox News</div>
+                        <div class="update-content">Trump shared a Fox Business clip of Maria Bartiromo hyping falling rates, oil prices, and deregulation, with her declaring, "President Trump won't back down!"</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Supreme Court Win on Immigration</div>
+                        <div class="update-content">The Supreme Court greenlit Trump's use of the Alien Enemies Act to deport Venezuelan gang suspects, overturning a lower court's injunction.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- April 7, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 7, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Market 'Medicine'</div>
+                        <div class="update-content">Defending tariff-driven market volatility, Trump claimed he's "not manipulating sell-offs" and told reporters, "Sometimes the market needs to take its medicine."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Allies Turn Against Him</div>
+                        <div class="update-content">Hedge funder Bill Ackman, a former supporter, warned of an "economic nuclear winter" unless tariffs ease.
+Musk mocked Navarro's "Harvard ego," calling for a transatlantic zero-tariff zone.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Diplomatic Surges</div>
+                        <div class="update-content">Held a late-night meeting with Israeli PM Netanyahu to discuss Gaza and tariffs.
+Scheduled a call with Japanese PM Ishibashi over U.S.-Japan trade tensions.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Controversial Prison Plan</div>
+                        <div class="update-content">Trump endorsed transferring U.S. inmates to El Salvador, despite legal challenges. "If they can lock up criminals cheaper, I'm for it—within the law," he said.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue with more days... -->
+        <!-- April 6, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 6, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Market Meltdown Spin</div>
+                        <div class="update-content">Trump amplified a supporter's video claiming the stock market crash was "intentional," then urged Americans to "hang in there" in a follow-up post. His contradictory messaging drew backlash for fueling panic.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Obama's Blistering Rebuke</div>
+                        <div class="update-content">Former President Obama unleashed unprecedented criticism, slamming Trump's tariffs as "bad for America" and branding him a "self-proclaimed king, a wannabe dictator, and a man who punishes enemies at every turn".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Nationwide Protests Erupt</div>
+                        <div class="update-content">Over 500,000 demonstrators flooded U.S. cities, denouncing Trump and Musk's policies on government cuts, immigration, and human rights in the largest anti-Trump protests since his re-election.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Tariff Formula Under Fire</div>
+                        <div class="update-content">The International Trade Center, Wedbush, and Cato Institute tore into Trump's tariff calculations as "reckless," "baseless," and "economically unsound," accusing him of ignoring global trade norms.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Treasury Secretary Turmoil</div>
+                        <div class="update-content">Reports emerged that Treasury Secretary Bethune planned to resign over disagreements with Trump's tariff algorithms, with sources describing him as "estranged" from the president's inner circle.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complete the April 5, 2025 section with all items -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 5, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Jobs Data Victory Lap</div>
+                        <div class="update-content">Trump hailed "amazing" nonfarm payroll numbers, declaring, "We can't lose!" amid bipartisan skepticism over the economy's long-term stability.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Golf Gala Trip</div>
+                        <div class="update-content">He jetted to Florida for a Punchbowl-reported golf tourney dinner, fueling criticism of his work-life balance.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Fed Pressure Campaign</div>
+                        <div class="update-content">Trump doubled down on demands for Jerome Powell to slash interest rates: "Stop playing politics—now's the time to cut!"</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Tax Cut Push Advances</div>
+                        <div class="update-content">The Senate greenlit procedural steps for Trump's tax cuts and border agenda, sending the measures to the House.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Musk Exit Saga</div>
+                        <div class="update-content">Trump acknowledged Musk might leave within months but insisted the "efficiency agenda" would continue. Musk later dismissed the claims as "fake news".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Investment Pitch</div>
+                        <div class="update-content">In a fiery tweet, Trump declared: "Invest in America—you'll get rich! My policies are unshakable. This is your moment!"</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Gold Card Visa Plan</div>
+                        <div class="update-content">He announced plans for $5 million "gold cards" featuring his likeness, granting indefinite residency to wealthy buyers—a move critics called "crony capitalism".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Global Trade Talks</div>
+                        <div class="update-content">Trump held tariff negotiations with Vietnamese, Indian, and Israeli officials, while Japanese PM Ishibashi prepared for a phone call next week.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Vietnam Summit Tease</div>
+                        <div class="update-content">After a call with Vietnamese leader Nguyen Phu Trong, Trump hinted at a potential meeting to discuss zero tariffs for the Southeast Asian nation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add April 4, 2025 section -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 4, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Tax Cut Phase Two</div>
+                        <div class="update-content">White House Press Secretary Levitt confirmed tax cuts were "phase two" of Trump's economic agenda, aiming to offset tariff-driven inflation.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Mineral Tariff Probe</div>
+                        <div class="update-content">A White House official revealed plans to investigate tariffs on critical minerals, citing national security concerns.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Market Crash Denial</div>
+                        <div class="update-content">Despite the Dow's plunge, Trump insisted his tariffs would "supercharge" the economy—a claim mocked by economists as detached from reality.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Millionaire Tax Hike</div>
+                        <div class="update-content">Republicans floated a 39–40% top tax rate for earners over $1 million, a rare break from Trump's pro-wealthy rhetoric.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Iran Talks Opening</div>
+                        <div class="update-content">Trump signaled openness to direct talks with Iran, saying, "They might agree if we're tough but fair."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Brown University Funding Freeze</div>
+                        <div class="update-content">The administration froze $510 million in federal funds for Brown University over alleged anti-Semitism, marking the fifth such penalty.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Le Pen Advocacy</div>
+                        <div class="update-content">Trump demanded the release of French far-right leader Marine Le Pen, jailed for embezzlement, calling her case "political persecution".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">NSC Purge</div>
+                        <div class="update-content">Three top National Security Council officials—including Brian Walsh and Thomas Boodry—were fired after far-right influencer Laura Loomer criticized their "softness" on immigration.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add April 3, 2025 section -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 3, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Tariff "Nuclear Option"</div>
+                        <div class="update-content">Trump unveiled a 10% baseline tariff on all imports, with higher rates for trade deficit offenders like China (34%) and Vietnam (46%), triggering global outrage.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Beer & Aluminum Crackdown</div>
+                        <div class="update-content">Imported beer faced a 25% tariff, while empty aluminum cans were added to the Section 232 steel/aluminum tariff list.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Musk Exit Rumors</div>
+                        <div class="update-content">Reports emerged that Trump told aides Musk would return to SpaceX, though Musk denied the claims, calling them "garbage".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Law Firm Deal</div>
+                        <div class="update-content">Milbank agreed to provide $100 million in pro bono legal services, joining two other firms in Trump's "legal defense network."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">External Revenue Service</div>
+                        <div class="update-content">Plans for a new agency to collect global tariffs were leaked, prompting accusations of "economic overreach."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Poll Plunge</div>
+                        <div class="update-content">A Reuters/Ipsos poll showed Trump's approval rating hit 43%, the lowest of his second term, driven by tariff backlash.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Salvadoran Summit</div>
+                        <div class="update-content">Trump invited El Salvador's president to the White House, praising his "invaluable help" in curbing illegal immigration.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add April 2, 2025 section -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 2, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Tariff Tweaks</div>
+                        <div class="update-content">Trade officials floated a lower-rate tariff tier for allies, though Trump insisted he'd "keep pressure" on key partners.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">TikTok Showdown</div>
+                        <div class="update-content">Trump met with cabinet members to discuss TikTok's fate, with reports suggesting he'd demand U.S. ownership or a ban.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Wilkie Partnership</div>
+                        <div class="update-content">Wilkie Farr & Gallagher pledged $100 million in pro bono legal work, deepening Trump's ties to corporate America.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Military Exports Loosened</div>
+                        <div class="update-content">A draft executive order aimed to relax rules on arms sales, drawing criticism from anti-war groups.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Canada Tariff Fight</div>
+                        <div class="update-content">Trump urged Senate Republicans to block a Democratic bill ending his 25% steel/aluminum tariffs on Canada.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">24-Hour Senate Tirade</div>
+                        <div class="update-content">Sen. Cory Booker (D-NJ) delivered a marathon speech blasting Trump's "authoritarian drift," calling him a "danger to democracy."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Iran Nuclear Talks</div>
+                        <div class="update-content">Officials confirmed quiet negotiations with Iran via Omani mediators, though Trump preferred direct engagement.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add April 1, 2025 section -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 1, 2025</h2>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Tariff Deadline</div>
+                        <div class="update-content">Trump set a 3 AM Beijing time Thursday deadline for his reciprocal tariff announcement, vowing "friendliness" but warning of "steep" rates for laggards.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Musk Retention Ploy</div>
+                        <div class="update-content">He publicly appealed to Musk to stay, saying, "We'll keep him as long as possible—he's irreplaceable."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Investment Accelerator</div>
+                        <div class="update-content">An executive order created the U.S. Investment Accelerator to fast-track semiconductor projects under the CHIPS Act.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Houthi Offensive</div>
+                        <div class="update-content">Trump vowed to keep striking Houthi forces until they halt Red Sea attacks, dismissing calls for diplomacy.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Saudi Trip Confirmed</div>
+                        <div class="update-content">After securing $1 trillion in Saudi investments, Trump announced plans to visit Riyadh in April, possibly including UAE and Qatar.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Emissions Rollback</div>
+                        <div class="update-content">He moved to reverse Biden's auto emissions rules, calling them "job-killing" for Detroit.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Putin Trust Gamble</div>
+                        <div class="update-content">Trump said he'd hold off on secondary tariffs if Putin fulfilled Ukraine-related commitments, adding, "I believe in him—for now."</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Ticket Scalping Crackdown</div>
+                        <div class="update-content">An executive order targeted resellers, mandating transparency in concert ticket pricing.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Obama Rematch Tease</div>
+                        <div class="update-content">When asked about a hypothetical 2028 rematch, Trump grinned: "Bring it on. Obama vs. Trump III? That'd be epic."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update the pagination section to use numeric pagination and hide when not needed -->
+        <div class="flex justify-center mt-8" id="pagination-container" style="display: none;">
+            <nav class="inline-flex rounded-md shadow">
+                <a href="#" id="prev-page" class="px-4 py-2 bg-white border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    Previous
+                </a>
+                <a href="#" data-page="1" class="page-link px-4 py-2 bg-trump-navy border border-trump-navy text-sm font-medium text-white">
+                    1
+                </a>
+                <a href="#" data-page="2" class="page-link px-4 py-2 bg-white border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    2
+                </a>
+                <a href="#" id="next-page" class="px-4 py-2 bg-white border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    Next
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Replace the entire footer with the exact footer from index.html -->
+    <footer class="bg-trump-navy text-white py-8 mt-12" id="about-section">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">About TrumpNews.top</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay updated with the latest news and developments about Donald J. Trump. TrumpNews.top is your premier destination for comprehensive coverage of the 45th President of the United States.
+                    </p>
+                    <p class="text-gray-300">
+                        Our mission is to provide timely, accurate, and relevant information about Donald Trump's activities, policies, and statements. We aggregate news from various reputable sources to give you a complete picture of Trump-related developments.
+                    </p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold mb-4">Site Information</h3>
+                    
+                    <h4 class="text-sm font-semibold text-trump-gold mb-1">Copyright</h4>
+                    <p class="text-gray-300 mb-4">© 2025 trumpnews.top. All rights reserved.</p>
+                    
+                    <h4 class="text-sm font-semibold text-trump-gold mb-1">Publisher</h4>
+                    <p class="text-gray-300">Published by Green Sea Studio</p>
+                    <p class="text-gray-300 mb-4">Contact: limengmneg1218@gmail.com</p>
+                    
+                    <h4 class="text-sm font-semibold text-trump-gold mb-1">Content Sources</h4>
+                    <p class="text-gray-300">Images sourced from whitehouse.gov</p>
+                    <p class="text-gray-300">News content aggregated from various media outlets</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add mobile menu HTML -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="absolute top-4 right-4 text-white" id="close-menu">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#news-section">News</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Add JavaScript for performance optimization and mobile menu -->
+    <script>
+        // Prevent any automatic redirects
+        window.onbeforeunload = null;
+        
+        // Disable any history manipulation that might cause redirects
+        const originalPushState = history.pushState;
+        history.pushState = function() {
+            try {
+                return originalPushState.apply(this, arguments);
+            } catch (e) {
+                console.error('History API error:', e);
+                return;
+            }
+        };
+        
+        // Ensure links don't cause redirects
+        document.querySelectorAll('a').forEach(link => {
+            if (link.getAttribute('href') === '#') {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                });
+            }
+        });
+        
+        // Fix the scroll behavior that might be interpreted as a redirect
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Updated pagination functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if we need pagination (more than one month of content)
+            const needsPagination = false; // Set to true only when we have content spanning multiple months
+            const paginationContainer = document.getElementById('pagination-container');
+            
+            if (needsPagination) {
+                paginationContainer.style.display = 'flex';
+                
+                // Get all page links
+                const pageLinks = document.querySelectorAll('.page-link');
+                
+                // Add click handlers to page links
+                pageLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const page = this.getAttribute('data-page');
+                        
+                        // Update active state
+                        pageLinks.forEach(l => l.classList.remove('bg-trump-navy', 'text-white'));
+                        pageLinks.forEach(l => l.classList.add('bg-white', 'text-gray-700'));
+                        
+                        this.classList.remove('bg-white', 'text-gray-700');
+                        this.classList.add('bg-trump-navy', 'text-white');
+                        
+                        // In a real implementation, you would:
+                        // 1. Hide all month containers
+                        // 2. Show the container for the selected page
+                        // 3. Update the URL with the page parameter
+                    });
+                });
+                
+                // Handle previous/next buttons
+                const prevButton = document.getElementById('prev-page');
+                const nextButton = document.getElementById('next-page');
+                
+                if (prevButton) {
+                    prevButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // Find the currently active page and go to the previous one
+                        const activePage = document.querySelector('.page-link.bg-trump-navy');
+                        const prevPage = activePage.previousElementSibling;
+                        if (prevPage && prevPage.classList.contains('page-link')) {
+                            prevPage.click();
+                        }
+                    });
+                }
+                
+                if (nextButton) {
+                    nextButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // Find the currently active page and go to the next one
+                        const activePage = document.querySelector('.page-link.bg-trump-navy');
+                        const nextPage = activePage.nextElementSibling;
+                        if (nextPage && nextPage.classList.contains('page-link')) {
+                            nextPage.click();
+                        }
+                    });
+                }
+            } else {
+                // Hide pagination when not needed
+                paginationContainer.style.display = 'none';
+            }
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeButton = document.getElementById('close-menu');
+            
+            if (menuButton && mobileMenu && closeButton) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                });
+                
+                closeButton.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            }
+            
+            // Lazy load content for better performance
+            const lazyLoadContent = function() {
+                const dayContainers = document.querySelectorAll('.day-container');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    rootMargin: '100px'
+                });
+                
+                dayContainers.forEach(container => {
+                    container.style.opacity = 0;
+                    observer.observe(container);
+                });
+            };
+            
+            // Only use lazy loading on devices that support it
+            if ('IntersectionObserver' in window) {
+                lazyLoadContent();
+            }
+            
+            // Add touch-friendly navigation
+            const addTouchFriendlyNav = function() {
+                const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                if (isTouchDevice) {
+                    document.querySelectorAll('a, button').forEach(el => {
+                        if (!el.classList.contains('touch-friendly')) {
+                            el.classList.add('touch-friendly');
+                        }
+                    });
+                }
+            };
+            
+            addTouchFriendlyNav();
+        });
+        
+        // Optimize image loading
+        document.addEventListener('DOMContentLoaded', function() {
+            if ('loading' in HTMLImageElement.prototype) {
+                // Browser supports native lazy loading
+                document.querySelectorAll('img').forEach(img => {
+                    img.setAttribute('loading', 'lazy');
+                });
+            }
+        });
+        
+        // Defer non-critical JavaScript
+        const deferScript = function(src) {
+            const script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            document.body.appendChild(script);
+        };
+        
+        // Add any non-critical scripts here
+        // window.addEventListener('load', function() {
+        //     deferScript('path/to/non-critical.js');
+        // });
+    </script>
+</body>
+</html>
