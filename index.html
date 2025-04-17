@@ -52,7 +52,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Add this meta tag to prevent Google from detecting redirects -->
-    <meta name="googlebot" content="noarchive, noimageindex, follow, index">
+    <!-- <meta name="googlebot" content="noarchive, noimageindex, follow, index"> -->
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <style>
         body {
@@ -228,48 +230,32 @@
                 <p class="text-gray-600 mb-4" id="current-date"></p>
                 <div class="space-y-4">
                     <div class="update-item">
-                        <div class="update-title">Investigating Imports of Critical Minerals</div>
-                        <div class="update-content">The White House: President Trump signed an order to launch an investigation into the national security risks posed by the United States' dependence on imported processed critical minerals and their derivative products.</div>
+                        <div class="update-title">California to Sue over Tariffs</div>
+                        <div class="update-content">The office of California Governor Newsom issued a statement regarding Trump's tariff measures, stating that the state will file a lawsuit to seek an end to Trump's tariff policies. California's major industries, from Silicon Valley to agriculture, rely heavily on global trade, and thus could lose billions of dollars due to the tariffs.</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Accelerating the Issuance of All Necessary Permits to NVIDIA</div>
-                        <div class="update-content">President Trump: The United States will accelerate the issuance of all necessary permits to NVIDIA, and this also applies to all companies committed to being part of America's golden age.</div>
+                        <div class="update-title">Powell "Rejects" Long-term Political Pressure</div>
+                        <div class="update-content">Powell described tariffs as an act obviously harmful to the economy and criticized the approach taken by the government's efficiency department. Powell said that the Federal Reserve will not intervene to deal with the sharp decline in the stock market. Given the huge changes in Trump's tariff system, it is understandable that the market will encounter difficulties.</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Threatening to Tax Harvard University</div>
-                        <div class="update-content">President Trump: Harvard University may deserve to lose its tax-exempt status. Harvard University should perhaps be taxed as a political entity, and whether it can retain tax-exempt status depends on whether it serves the public interest.</div>
+                        <div class="update-title">US-Japan Trade Negotiations Launched</div>
+                        <div class="update-content">Trump met with the Japanese trade delegation and made significant progress. Sources said that Trump mentioned increasing Japan's military burden in the discussions with Japan. It is reported that the US-Japan tariff negotiations do not include foreign exchange.</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Suspending Tariffs for Flexibility</div>
-                        <div class="update-content">Trump: Tariffs were suspended because this is a transition period and it is necessary for flexibility.</div>
+                        <div class="update-title">Tariffs Shatter Hollywood's Recovery Hopes</div>
+                        <div class="update-content">After Federal Reserve Chairman Powell issued a warning that Trump's tariff policies "are highly likely" to stimulate inflation and have a lasting impact, the stock prices of many US film companies plummeted again.</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Phased Withdrawal from Syria</div>
-                        <div class="update-content">According to Israel's Yedioth Ahronoth: The Trump administration has informed Israel that it will start a phased withdrawal from Syria within two months.</div>
+                        <div class="update-title">Listed among the 100 Most Influential People in TIME</div>
+                        <div class="update-content">Trump and five of his government officials were included in the "100 Most Influential People in the World" list of TIME magazine.</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Advancing the Drug Price Negotiation Process in Medicare</div>
-                        <div class="update-content">The White House: Trump signed an executive order on healthcare, aiming to drive changes in the drug price negotiation process in Medicare.</div>
+                        <div class="update-title">To Meet Italian Prime Minister Meloni</div>
+                        <div class="update-content">US President Trump will meet with Italian Prime Minister Meloni at 13:05 on Thursday, Eastern Time (01:05 on Friday, Beijing Time). Meloni previously said that she "doesn't feel any pressure at all".</div>
                     </div>
                     <div class="update-item">
-                        <div class="update-title">Blocking Undocumented Immigrants from Social Security Benefits</div>
-                        <div class="update-content">The White House: Trump signed a presidential memorandum aimed at blocking undocumented immigrants and other ineligible individuals from obtaining Social Security Act benefits.</div>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-title">Exempting Coal-Fired Power Plants from Toxic Substance Restrictions</div>
-                        <div class="update-content">A list of facilities released by the US Environmental Protection Agency (EPA) on Tuesday shows that the Trump administration has granted a two-year exemption from mercury and air toxics standards to coal-fired power plants of 47 companies.</div>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-title">Willing to Help Mexico Combat Drug Cartels</div>
-                        <div class="update-content">Trump: I have a good relationship with Mexican President Ximbaum. We want to help Ximbaum and Mexico fight drug cartels.</div>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-title">Cooperating with Panama on Canal-Related Matters</div>
-                        <div class="update-content">Trump: We are currently cooperating with Panama on matters related to the canal.</div>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-title">Costs of All Goods Are Declining</div>
-                        <div class="update-content">President Trump said that as the United States imposes "record-breaking" tariffs, the costs of all goods, including gasoline and groceries, are declining.</div>
+                        <div class="update-title">Extending the Ban on Russian Ships Entering US Ports</div>
+                        <div class="update-content">US President Trump extended the ban on Russian ships entering US ports for another year.</div>
                     </div>
                 </div>
             </div>
@@ -1055,189 +1041,36 @@
         // Call the function when the page loads
         document.addEventListener('DOMContentLoaded', function() {
             fetchRedditContent();
-        });
-
-        // Fix the news loading function to properly display the Load More button
-        function loadNews(page = 1, append = false) {
-            const newsContainer = document.getElementById('news-container');
-            const loadMoreContainer = document.getElementById('load-more-container');
             
-            // If loading more content, show a loading spinner at the end
-            if (append) {
-                const loadingSpinner = document.createElement('div');
-                loadingSpinner.className = 'loading-spinner';
-                newsContainer.appendChild(loadingSpinner);
-            } else {
-                // Initial load - replace content with spinner
-                newsContainer.innerHTML = '<div class="loading-spinner"></div>';
-            }
-            
-            // Simulate API call delay
-            setTimeout(() => {
-                // Remove loading spinners
-                const spinners = newsContainer.querySelectorAll('.loading-spinner');
-                spinners.forEach(spinner => spinner.remove());
-                
-                // Generate mock news items (10 per page)
-                const newsItems = generateMockNews(page);
-                
-                // If not appending, clear the container first
-                if (!append) {
-                    newsContainer.innerHTML = '';
-                }
-                
-                // Add news items to container
-                newsItems.forEach(item => {
-                    const newsItem = document.createElement('div');
-                    newsItem.className = 'news-item p-4 border-b border-gray-200 hover:bg-gray-50 transition duration-150';
-                    newsItem.innerHTML = `
-                        <div class="flex items-start">
-                            <div class="flex-1">
-                                <h3 class="text-lg font-semibold mb-1 text-trump-navy">${item.title}</h3>
-                                <p class="text-gray-600 text-sm mb-2">${item.source} · ${item.date}</p>
-                            </div>
-                        </div>
-                    `;
-                    newsContainer.appendChild(newsItem);
-                });
-                
-                // Always show the load more button (except on the last page)
-                if (page < 5) { // Assuming we have 5 pages of news
-                    // Make sure the button container exists
-                    if (!document.getElementById('load-more-container')) {
-                        const buttonContainer = document.createElement('div');
-                        buttonContainer.id = 'load-more-container';
-                        buttonContainer.className = 'flex justify-center py-6';
-                        buttonContainer.innerHTML = `
-                            <button id="load-more-button" class="bg-trump-navy text-white px-8 py-3 rounded font-semibold hover:bg-opacity-90 transition">
-                                Load More News
-                            </button>
-                        `;
-                        document.getElementById('news-section').querySelector('.bg-white').appendChild(buttonContainer);
-                        
-                        // Add click event to the new button
-                        document.getElementById('load-more-button').addEventListener('click', function() {
-                            loadNews(page + 1, true);
-                        });
-                    } else {
-                        // Update existing button
-                        loadMoreContainer.style.display = 'flex';
-                        const loadMoreButton = document.getElementById('load-more-button');
-                        loadMoreButton.onclick = function() {
-                            loadNews(page + 1, true);
-                        };
+            // Remove any history manipulation that might cause redirects
+            if (window.history && window.history.pushState) {
+                const originalPushState = window.history.pushState;
+                window.history.pushState = function() {
+                    try {
+                        return originalPushState.apply(this, arguments);
+                    } catch (e) {
+                        console.error('History API error:', e);
+                        return;
                     }
-                } else {
-                    // Hide the button on the last page
-                    if (loadMoreContainer) {
-                        loadMoreContainer.style.display = 'none';
-                    }
-                }
-            }, 500); // Reduced loading delay for better UX
-        }
-
-        // Make sure we have the generateMockNews function
-        function generateMockNews(page) {
-            const mockNewsTitles = [
-                "Trump's second-term honeymoon might be over - Politico",
-                "A look at Laura Loomer, longtime Trump ally criticized for racist posts and Sept. 11 conspiracies - AP News",
-                "The global reaction to Trump's tariffs, in 10 candid quotes - The Washington Post",
-                "Republicans weigh using the power of Congress to rein in Trump on tariffs - NBC News",
-                "Trump's tariff plan sparks global backlash and market turmoil - Reuters",
-                "Former Trump officials warn of economic fallout from new tariffs - CNN",
-                "Trump defends tariff strategy in heated press conference - Fox News",
-                "Analysis: How Trump's tariffs could impact American consumers - Bloomberg",
-                "Trump meets with business leaders to discuss economic policy - CNBC",
-                "Trump's approval rating drops amid tariff controversy - The Hill",
-                "European Union prepares response to Trump's tariff announcement - BBC",
-                "Trump criticizes Federal Reserve's approach to inflation - Wall Street Journal",
-                "Trump campaign announces new swing state strategy - Axios",
-                "Trump's legal team files motion to dismiss latest charges - New York Times",
-                "Trump proposes new immigration policy focused on merit-based system - ABC News",
-                "Trump's social media posts draw criticism from both parties - NPR",
-                "Trump visits manufacturing plant, promises job growth - USA Today",
-                "Trump's foreign policy agenda faces congressional pushback - Foreign Policy",
-                "Trump announces new executive order on healthcare - The Atlantic",
-                "Trump's infrastructure plan gains support from key lawmakers - Politico",
-                "Trump's tax returns remain central issue in ongoing legal battle - Washington Post",
-                "Trump rallies supporters in key battleground state - Associated Press",
-                "Trump's energy policy criticized by environmental groups - The Guardian",
-                "Trump meets with tech executives to discuss AI regulation - TechCrunch",
-                "Trump's trade advisor defends tariff strategy on Sunday talk shows - Meet the Press",
-                "Trump's border wall funding faces new legal challenges - Los Angeles Times",
-                "Trump announces new national security team appointments - National Review",
-                "Trump's education policy focuses on school choice expansion - Education Week",
-                "Trump criticizes NATO allies over defense spending - Defense News",
-                "Trump's Middle East peace plan receives mixed international response - Al Jazeera"
-            ];
-            
-            const sources = ["Politico", "AP News", "The Washington Post", "NBC News", "Reuters", "CNN", "Fox News", "Bloomberg", "CNBC", "The Hill"];
-            
-            // Calculate which items to return based on page number
-            const startIndex = (page - 1) * 10;
-            const endIndex = startIndex + 10;
-            
-            return mockNewsTitles.slice(startIndex, endIndex).map((title, index) => {
-                const randomSource = sources[Math.floor(Math.random() * sources.length)];
-                const randomDate = new Date();
-                randomDate.setDate(randomDate.getDate() - Math.floor(Math.random() * 7));
-                
-                return {
-                    title: title,
-                    source: title.split(' - ').pop() || randomSource,
-                    date: "Today",
-                    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 };
-            });
-        }
-
-        // Initialize the page when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set current date
-            const currentDate = document.getElementById('current-date');
-            const date = new Date();
-            currentDate.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            
-            // Load first page of news
-            loadNews(1, false);
-            
-            // Load Reddit content
-            fetchRedditContent();
+            }
             
             // Prevent any automatic redirects
             window.onbeforeunload = null;
-            
-            // Disable any history manipulation that might cause redirects
-            const originalPushState = history.pushState;
-            history.pushState = function() {
-                try {
-                    return originalPushState.apply(this, arguments);
-                } catch (e) {
-                    console.error('History API error:', e);
-                    return;
-                }
-            };
-            
-            // Ensure links don't cause redirects
-            document.querySelectorAll('a').forEach(link => {
-                if (link.getAttribute('href') === '#') {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                    });
-                }
-            });
-            
-            // Fix the scroll behavior that might be interpreted as a redirect
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Use standard anchor behavior instead of JavaScript scrolling
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    // Allow default browser behavior for anchor links
+                    // Don't prevent default or use JavaScript scrolling
                 });
+            });
+            
+            // Fix any links with empty href
+            document.querySelectorAll('a[href="#"]').forEach(link => {
+                link.setAttribute('href', 'javascript:void(0);');
             });
         });
     </script>
