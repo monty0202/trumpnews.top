@@ -54,8 +54,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Add this meta tag to prevent Google from detecting redirects -->
-    <meta name="googlebot" content="noarchive, noimageindex, follow, index">
+    <!-- Fix meta tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <style>
         body {
@@ -242,11 +242,50 @@
             <h2 class="text-2xl font-bold text-trump-navy border-b-2 border-trump-navy pb-2">April 2025</h2>
         </div>
 
+        <!-- April 17, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">April 17, 2025</h2>
+                <span class="text-sm bg-trump-red px-2 py-1 rounded">Latest</span>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">California to Sue over Tariffs</div>
+                        <div class="update-content">The office of California Governor Newsom issued a statement regarding Trump's tariff measures, stating that the state will file a lawsuit to seek an end to Trump's tariff policies. California's major industries, from Silicon Valley to agriculture, rely heavily on global trade, and thus could lose billions of dollars due to the tariffs.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Powell "Rejects" Long-term Political Pressure</div>
+                        <div class="update-content">Powell described tariffs as an act obviously harmful to the economy and criticized the approach taken by the government's efficiency department. Powell said that the Federal Reserve will not intervene to deal with the sharp decline in the stock market. Given the huge changes in Trump's tariff system, it is understandable that the market will encounter difficulties.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">US-Japan Trade Negotiations Launched</div>
+                        <div class="update-content">Trump met with the Japanese trade delegation and made significant progress. Sources said that Trump mentioned increasing Japan's military burden in the discussions with Japan. It is reported that the US-Japan tariff negotiations do not include foreign exchange.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Tariffs Shatter Hollywood's Recovery Hopes</div>
+                        <div class="update-content">After Federal Reserve Chairman Powell issued a warning that Trump's tariff policies "are highly likely" to stimulate inflation and have a lasting impact, the stock prices of many US film companies plummeted again.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Listed among the 100 Most Influential People in TIME</div>
+                        <div class="update-content">Trump and five of his government officials were included in the "100 Most Influential People in the World" list of TIME magazine.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">To Meet Italian Prime Minister Meloni</div>
+                        <div class="update-content">US President Trump will meet with Italian Prime Minister Meloni at 13:05 on Thursday, Eastern Time (01:05 on Friday, Beijing Time). Meloni previously said that she "doesn't feel any pressure at all".</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Extending the Ban on Russian Ships Entering US Ports</div>
+                        <div class="update-content">US President Trump extended the ban on Russian ships entering US ports for another year.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- April 16, 2025 -->
         <div class="day-container">
             <div class="day-header">
                 <h2 class="text-xl font-bold">April 16, 2025</h2>
-                <span class="text-sm bg-trump-red px-2 py-1 rounded">Latest</span>
             </div>
             <div class="day-content">
                 <div class="space-y-4">
@@ -1001,41 +1040,21 @@ Scheduled a call with Japanese PM Ishibashi over U.S.-Japan trade tensions.</div
 
     <!-- Add JavaScript for performance optimization and mobile menu -->
     <script>
+        // Remove any history manipulation that might cause redirects
+        if (window.history && window.history.pushState) {
+            const originalPushState = window.history.pushState;
+            window.history.pushState = function() {
+                try {
+                    return originalPushState.apply(this, arguments);
+                } catch (e) {
+                    console.error('History API error:', e);
+                    return;
+                }
+            };
+        }
+        
         // Prevent any automatic redirects
         window.onbeforeunload = null;
-        
-        // Disable any history manipulation that might cause redirects
-        const originalPushState = history.pushState;
-        history.pushState = function() {
-            try {
-                return originalPushState.apply(this, arguments);
-            } catch (e) {
-                console.error('History API error:', e);
-                return;
-            }
-        };
-        
-        // Ensure links don't cause redirects
-        document.querySelectorAll('a').forEach(link => {
-            if (link.getAttribute('href') === '#') {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                });
-            }
-        });
-        
-        // Fix the scroll behavior that might be interpreted as a redirect
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
 
         // Updated pagination functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -1180,6 +1199,22 @@ Scheduled a call with Japanese PM Ishibashi over U.S.-Japan trade tensions.</div
         // window.addEventListener('load', function() {
         //     deferScript('path/to/non-critical.js');
         // });
+
+        // Replace JavaScript-based scrolling with proper anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Use standard anchor behavior instead of JavaScript scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    // Allow default browser behavior for anchor links
+                    // Don't prevent default or use JavaScript scrolling
+                });
+            });
+            
+            // Fix any links with empty href
+            document.querySelectorAll('a[href="#"]').forEach(link => {
+                link.setAttribute('href', 'javascript:void(0);');
+            });
+        });
     </script>
 </body>
 </html>
