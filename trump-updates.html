@@ -240,11 +240,50 @@
 
         <h2 class="text-2xl font-bold text-trump-navy border-b-2 border-trump-navy pb-2">May 2025</h2>
 
+        <!-- May 3, 2025 -->
+        <div class="day-container">
+            <div class="day-header">
+                <h2 class="text-xl font-bold">May 3, 2025</h2>
+                <span class="text-sm bg-trump-red px-2 py-1 rounded">Latest</span>
+            </div>
+            <div class="day-content">
+                <div class="space-y-4">
+                    <div class="update-item">
+                        <div class="update-title">Planning to Revoke Harvard's Tax-Exempt Status</div>
+                        <div class="update-content">US President Trump said he would revoke Harvard University's tax-exempt status. Harvard responded that this action has no legal basis, and if such a measure is applied to more universities, it will have serious consequences for the future of US higher education.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Calling for Interest Rate Cuts</div>
+                        <div class="update-content">After the release of the non-farm payrolls report, Trump posted that the gasoline price has just dropped below $1.98 per gallon, the lowest level in years. Grocery prices are falling, energy prices are falling, mortgage rates are declining, and employment is strong. There is more good news. Tariffs have brought in billions of dollars in revenue. As I said, we are only in the transition stage and just getting started!! Consumers have been waiting for prices to drop for years. There is no inflation, and the Federal Reserve should cut interest rates!!</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Canadian Prime Minister to Meet with Trump in the US Next Week</div>
+                        <div class="update-content">Canadian Prime Minister Carney said he will go to the White House in the United States to meet with US President Trump next Tuesday (the 6th). The key topics of the meeting will be the current trade pressure and the "broader future economic and security relations" between Canada and the United States.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Releasing the 2026 Budget</div>
+                        <div class="update-content">On May 2nd, local time, the Trump administration said in a statement that it will cut $163 billion in federal spending next year. The White House Office of Management and Budget said that compared with the level set in 2025, the proposed budget will increase defense spending by 13%, homeland security spending by nearly 65%, and non-defense discretionary spending will be cut by 23%, reaching the lowest level since 2017. In addition, the White House proposed a budget of $1.7 trillion for the 2026 fiscal year, a 7.6% decrease from the previous year. White House officials said that the proposed 2026 fiscal year budget contains the lowest non-defense spending since 2000.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Trying to Squeeze Pharmaceutical Manufacturers' Revenue to Pay for Tax Cuts</div>
+                        <div class="update-content">According to foreign media reports, US President Trump has set his sights on the pharmaceutical industry, hoping that the pharmaceutical industry will bear part of the cost of tax cuts, and urging congressional Republicans to force pharmaceutical manufacturers to accept price cuts for prescription drugs covered by the Medicaid program.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Putting Pressure on Mexico</div>
+                        <div class="update-content">Trump and Mexican President Cienbaum have been arguing about the drug cartels. Trump is putting pressure on Mexico to allow the United States to be more deeply involved in the fight against drug cartels. In addition, Trump and Cienbaum discussed the issue of US troops in a phone call on April 16th.</div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-title">Posting an AI-Synthesized "Pope Photo"</div>
+                        <div class="update-content">US President Trump posted a photo on "Truth Social" that was obviously processed by AI. In the photo, he was wearing a pope's white robe. This post was reposted by the official White House X account. Earlier this week, when asked about his preferred candidate for the new pope, Trump joked, "I want to be the pope," and added that Archbishop Dolan of New York "would also be suitable."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- May 1, 2025 -->
         <div class="day-container">
             <div class="day-header">
                 <h2 class="text-xl font-bold">May 1, 2025</h2>
-                <span class="text-sm bg-trump-red px-2 py-1 rounded">Latest</span>
             </div>
             <div class="day-content">
                 <div class="space-y-4">
@@ -1670,13 +1709,13 @@ Scheduled a call with Japanese PM Ishibashi over U.S.-Japan trade tensions.</div
         if (window.history && window.history.pushState) {
             const originalPushState = window.history.pushState;
             window.history.pushState = function() {
-                try {
-                    return originalPushState.apply(this, arguments);
-                } catch (e) {
-                    console.error('History API error:', e);
-                    return;
-                }
-            };
+            try {
+                return originalPushState.apply(this, arguments);
+            } catch (e) {
+                console.error('History API error:', e);
+                return;
+            }
+        };
         }
         
         // Prevent any automatic redirects
